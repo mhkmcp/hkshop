@@ -6,7 +6,7 @@ from django.db.models.fields.related import ForeignKey, OneToOneField
 class Product(models.Model):
     user            = ForeignKey(User, on_delete=models.SET_NULL, null=True)
     name            = models.CharField(max_length=255, null=True, blank=True)
-    # image = 
+    image           = models.ImageField(null=True, blank=True)
     brand           = models.CharField(max_length=255, null=True, blank=True)
     category        = models.CharField(max_length=255, null=True, blank=True)
     description     = models.TextField()
