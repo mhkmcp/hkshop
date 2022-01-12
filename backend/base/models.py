@@ -16,8 +16,6 @@ class Product(models.Model):
     count_in_stock  = models.IntegerField(default=0, null=True, blank=True)
     created_at      = models.DateTimeField(auto_now_add=True)
     updated_at      = models.DateTimeField(auto_now =True)
-    _id             = models.AutoField(primary_key=True, editable=False)
-
 
     def __str__(self) -> str:
         return self.name
@@ -29,6 +27,8 @@ class Review(models.Model):
     name            = models.CharField(max_length=255, null=True, blank=True)
     rating          = models.IntegerField(default=0, null=True, blank=True)
     comment         = models.TextField()
+    created_at      = models.DateTimeField(auto_now_add=True)
+    updated_at      = models.DateTimeField(auto_now =True)
   
     def __str__(self) -> str:
         return self.name + ' ' + str(self.rating)
@@ -58,6 +58,7 @@ class OrderItem(models.Model):
     quantity        = models.IntegerField(default=0, null=True, blank=True)
     price           = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
     image           = models.CharField(max_length=255, null=True, blank=True)
+
 
     def __str__(self) -> str:
         return self.name
