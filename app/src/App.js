@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import ProductPage from './pages/ProductPage'
+import CartPage from './pages/CartPage'
 
 function App() {
     return (
@@ -20,6 +21,9 @@ function App() {
 							</Route>
 							<Route path='/product/:id'>
 								<ProductPage />
+							</Route>
+							<Route path='/cart/:id?'>
+								<CartPage />
 							</Route>
 						</Switch> 
 					</Container>
