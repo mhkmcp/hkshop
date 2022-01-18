@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import ProductPage from './pages/ProductPage'
 import CartPage from './pages/CartPage'
+import LoginPage from './pages/LoginPage'
 
 function App() {
     return (
@@ -18,6 +19,9 @@ function App() {
 						<Switch>
 							<Route path='/' exact>
 								<Home />
+							</Route>
+							<Route path='/login'>
+								<LoginPage />
 							</Route>
 							<Route path='/product/:id'>
 								<ProductPage />
