@@ -82,7 +82,7 @@ function LoginPage() {
                     <Link to={redirect ? 
                     `/register?redirect=${redirect}` 
                     : '/register'}>
-                        Register
+                        {' '} Register
                     </Link>
                 </Col>
             </Row>

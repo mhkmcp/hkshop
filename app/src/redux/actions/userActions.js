@@ -19,9 +19,8 @@ export const login = (email, password) => async (dispatch) => {
                 'Content-type': 'application/json'
             }
         }
-        const URL = '/api/users/login/'
         const { data } = await axios.post(
-            URL,
+            '/api/users/login',
             { 'username': email, 'password': password },
             config
         )
