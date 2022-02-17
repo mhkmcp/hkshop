@@ -24,7 +24,7 @@ function LoginPage() {
     const { error, loading, userInfo } = userLogin
 
 
-    useEffect(() => {
+    useEffect(() => { 
         if(userInfo) {
             history.push(redirect)
         }
